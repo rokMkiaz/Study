@@ -1,0 +1,16 @@
+static LPFN_CONNECTEX		ConnectEx; 
+static LPFN_DISCONNECTEX		DisconnectEx;
+static LPFN_ACCEPTEX		AcceptEx;
+ 함수 포인터
+
+WSADATA 구조체, 윈도우 소캣
+WSASocket 윈도우 상세소켓 설정
+
+IOCP구조
+ Dispatch가 루프를 돌며 메세지를 대기함
+iocpEvent는 실질적으로 Read/Write하는지
+enable_shared_from_this  자기자신의 포인터를 들게함.
+
+Session 주고 받는 구역.
+Send는 언제 발생하는지 알 수 없는 부분
+클라<->서버, 서버<->서버 로 세션을 분리해서 관리해준다.
