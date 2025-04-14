@@ -12,3 +12,24 @@ WBCS(Wide Byte Character Set)
  패킷을 바이트 단위로 잘개 쪼개서 송신을 함. 패킷을 확실히 받았는지 체크가 필요하다.
 구글 프로토 버프
 구글에 CMake라는 객체도 다운받는다. 해당 프로그램으로 구글프로토의 솔루션을 만들어 Lib를 만들어 프로젝트에 추가해준다.
+
+bat파일을 
+빌드 전 이벤트-> CALL $(SolutionDir)Common\Protobuf\bin\GenPackets.bat
+추가하여 해당 배치파일을 실행할 수 있음
+
+UpToDateCheckInput <- 변화가 있을시 해당 이벤트를 실행
+추가적으로 .vcxproj 파일에 하기구문을 추가해야한다.
+  <ItemGroup>
+    <UpToDateCheckInput Include="..\Common\Protobuf\bin\Enum.proto" />
+    <UpToDateCheckInput Include="..\Common\Protobuf\bin\Protocol.proto" />
+    <UpToDateCheckInput Include="..\Common\Protobuf\bin\Struct.proto" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\Common\Protobuf\bin\Enum.proto" />
+    <None Include="..\Common\Protobuf\bin\GenPackets.bat" />
+    <None Include="..\Common\Protobuf\bin\Protocol.proto" />
+    <None Include="..\Common\Protobuf\bin\Struct.proto" />
+  </ItemGroup>
+
+Jinja2, pyinstaller 두가지 패키지를 추가해준다.
