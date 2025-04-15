@@ -33,3 +33,8 @@ UpToDateCheckInput <- 변화가 있을시 해당 이벤트를 실행
   </ItemGroup>
 
 Jinja2, pyinstaller 두가지 패키지를 추가해준다.
+
+커맨더 패턴
+ 특정 요청을 클래스나 객체로 합쳐준다.
+람다 함수
+ 
