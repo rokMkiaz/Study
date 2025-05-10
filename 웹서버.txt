@@ -1,0 +1,12 @@
+처음부터 만드는 경우는 없고, 프레임워크를 하나 골라서 사용
+HTML tag에서 명령어를 찾아보면됨
+div -> division , 하나의 섹션을 말하는것
+<style> 는 CSS로 사용한다는 문법임.
+Async 는 코루틴과 비슷, 비동기 방식의 일처리를 지원
+
+Model View Controller -> 데이터를 어떻게 디자인 할것인지 -> 최신방식은 아님.
+Razor은 C#이 섞인 Html임 
+
+SPA (Single Page Application)
+
+NTT프레임워크 포렌키,숨겨진키, 1:1관계를 나타내지 못함
